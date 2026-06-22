@@ -1,0 +1,14 @@
+[build]
+  command = "pnpm build"
+  publish = ".next"
+
+[build.environment]
+  NODE_VERSION = "22"
+
+[context.deploy-preview.environment]
+  NEXT_PUBLIC_ALLOW_INDEXING = "false"
+  NEXT_PUBLIC_INDEXING_DISABLED = "true"
+
+[context.branch-deploy.environment]
+  NEXT_PUBLIC_ALLOW_INDEXING = "false"
+  NEXT_PUBLIC_INDEXING_DISABLED = "true"
